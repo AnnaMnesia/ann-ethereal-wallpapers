@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'PP Supply Sans';
+    src: url(./fonts/PPSupplyMono-Regular.otf) format(opentype);
+}
+
+
+html, body{
+    width: 100vw;
+    height: 100vh;
+    font-family: 'PP Supply Sans', sans-serif;
+    background: #FAFAFA;
+    color: #0D0D0D;
+}
+
+nav,
+footer{
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    font-family: 'PP Supply Sans', sans-serif;
+    font-size: 15px;
+    text-transform: uppercase;
+    opacity: 0.9;
+    z-index: 2;
+}
+
+nav > div {
+    display: flex;
+    gap: 50px;
+}
+
+
+footer{
+    bottom: 0;
+    z-index: 2;
+}
+
+footer > div{
+    display: flex;
+    align-items: flex-end;
+}
+
+footer > div:nth-child(2){
+    display: flex;
+    flex-direction: column;
+}
+
+
+.view-btn{
+    letter-spacing: normal;
+    transition: letter-spacing 1s ease;
+    text-decoration: none;
+    color: #1E24F4;
+    cursor: pointer;
+}
+
+.view-btn:hover {
+    letter-spacing: 0.2em;
+}
+
+.container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.item{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70px;
+    height: 100px;
+    background: #FAFAFA;
+    margin: 10px;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.about-open,
+.about-close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 20px;
+    text-transform: uppercase;
+    font-size: 15px;
+    cursor: pointer;
+    z-index: 2;
+    color: #1E24F4;
+}
+
+
+.about-container{
+    position: fixed;
+    right: 0;
+    width: 50%;
+    height: 100vh;
+    background: #fff;
+    z-index: 1000;
+}
+
+.about-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 30px;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+
+.about{
+    width: 100%;
+}
+
+.contact{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.contact-left{
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.socials{
+    display: flex;
+    flex-direction: column;
+}
+
+.socials a{
+    letter-spacing: normal;
+    transition: letter-spacing 1s ease;
+    text-decoration: none;
+    color: #1E24F4;
+    cursor: pointer;
+}
+
+
+.socials a:hover {
+    letter-spacing: 0.2em;
+}
+
+.description{
+    line-height: 1em;
+    width: 50%;
+}
+
+@media (max-width: 600px) {
+    nav,
+    footer,
+    .contact,
+    .description{
+    font-size: 13px;
+    }
+
+    nav > div {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+    }
+
+    .about-container{
+        width: 100%;
+    }
+}

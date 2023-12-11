@@ -1,0 +1,223 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: 'PP Supply Sans';
+    src: url(./fonts/PPSupplyMono-Regular.otf) format(opentype);
+}
+
+
+html,
+body{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: #FAFAFA;
+}
+
+nav,
+footer{
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    font-family: 'PP Supply Sans', sans-serif;
+    font-size: 15px;
+    text-transform: uppercase;
+    opacity: 0.9;
+}
+
+nav > div {
+    display: flex;
+    gap: 50px;
+}
+
+footer{
+    bottom: 0;
+}
+
+footer > div{
+    display: flex;
+    align-items: flex-end;
+}
+
+footer > div:nth-child(2){
+    display: flex;
+    flex-direction: column;
+}
+
+.view-btn{
+    letter-spacing: normal;
+    transition: letter-spacing 1s ease;
+    text-decoration: none;
+    color: #1E24F4;
+    cursor: pointer;
+}
+
+.view-btn:hover {
+    letter-spacing: 0.2em;
+}
+
+
+.slider{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.slider-wrapper{
+    width: max-content;
+    padding: 0 150px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 100px;
+}
+
+.slide{
+    width: 282px;
+    height: 500px;
+    background: #FAFAFA;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.marker-wrapper{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: max-content;
+    height: 100vh;
+}
+
+.marker{
+    position: relative;
+    width: 2px;
+    height: 100%;
+    background: #0D0D0D;
+}
+
+.marker::after{
+    position: absolute;
+    content: '';
+    display: block;
+    top: 50px;
+    left: -20px;
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border: 2px solid #0D0D0D;
+    border-radius: 100%;
+}
+
+.active-slide{
+    position: absolute;
+    top: 60px;
+    left: 40px;
+    font-family: 'PP Supply Sans', sans-serif;
+    font-size: 15px;
+}
+
+
+
+.about-open,
+.about-close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 20px;
+    text-transform: uppercase;
+    font-size: 15px;
+    cursor: pointer;
+    z-index: 2;
+    font-family: 'PP Supply Sans', sans-serif;
+    color: #1E24F4;
+}
+
+
+.about-container{
+    position: fixed;
+    right: 0;
+    width: 50%;
+    height: 100vh;
+    background: #fff;
+    z-index: 1000;
+    font-family: 'PP Supply Sans', sans-serif;
+}
+
+.about-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 30px;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+
+.about{
+    width: 100%;
+}
+
+.contact{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.contact-left{
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.socials{
+    display: flex;
+    flex-direction: column;
+}
+
+.socials a{
+    letter-spacing: normal;
+    transition: letter-spacing 1s ease;
+    text-decoration: none;
+    color: #1E24F4;
+    cursor: pointer;
+}
+
+
+.socials a:hover {
+    letter-spacing: 0.2em;
+}
+
+.description{
+    line-height: 1em;
+    width: 50%;
+}
+
+
+
+@media (max-width: 600px) {
+    nav,
+    footer,
+    .contact,
+    .description{
+    font-size: 13px;
+    }
+
+    nav > div {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+    }
+
+    .about-container{
+        width: 100%;
+    }
+}
