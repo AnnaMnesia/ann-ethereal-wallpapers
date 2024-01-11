@@ -1,4 +1,4 @@
-# Ethereal Wallpapers Gallery
+# Ethereal Wallpapers Gallery : ONE BLOCK
 
 This project showcases the mesmerizing Ethereal Grainscapes Wallpapers by digital artist Ann, providing an immersive gallery experience. Implemented using HTML, CSS, and JavaScript, this static website leverages GSAP (GreenSock Animation Platform) for seamless animations, enhancing user engagement.
 
